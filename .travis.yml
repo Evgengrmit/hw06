@@ -1,10 +1,6 @@
 language: cpp
 os:
   - osx
-  - linux
-compiler:
-  - gcc
-  - clang
 jobs:
   include:
   - name: "all projects"

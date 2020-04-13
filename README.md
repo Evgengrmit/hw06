@@ -50,10 +50,6 @@ EOF
 language: cpp
 os:
   - osx
-  - linux
-compiler:
-  - gcc
-  - clang
 EOF
 ```
 Скрипт, который выполняет команды `cmake` для сборки проектов в каждой директории
