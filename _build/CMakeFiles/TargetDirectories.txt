@@ -1,0 +1,13 @@
+/Users/evgengrmit/Evgengrmit/workspace/projects/hw06/_build/CMakeFiles/install/local.dir
+/Users/evgengrmit/Evgengrmit/workspace/projects/hw06/_build/CMakeFiles/solver_lib.dir
+/Users/evgengrmit/Evgengrmit/workspace/projects/hw06/_build/CMakeFiles/list_install_components.dir
+/Users/evgengrmit/Evgengrmit/workspace/projects/hw06/_build/CMakeFiles/hello_world.dir
+/Users/evgengrmit/Evgengrmit/workspace/projects/hw06/_build/CMakeFiles/edit_cache.dir
+/Users/evgengrmit/Evgengrmit/workspace/projects/hw06/_build/CMakeFiles/rebuild_cache.dir
+/Users/evgengrmit/Evgengrmit/workspace/projects/hw06/_build/CMakeFiles/package_source.dir
+/Users/evgengrmit/Evgengrmit/workspace/projects/hw06/_build/CMakeFiles/install/strip.dir
+/Users/evgengrmit/Evgengrmit/workspace/projects/hw06/_build/CMakeFiles/package.dir
+/Users/evgengrmit/Evgengrmit/workspace/projects/hw06/_build/CMakeFiles/solver.dir
+/Users/evgengrmit/Evgengrmit/workspace/projects/hw06/_build/CMakeFiles/install.dir
+/Users/evgengrmit/Evgengrmit/workspace/projects/hw06/_build/CMakeFiles/formatter.dir
+/Users/evgengrmit/Evgengrmit/workspace/projects/hw06/_build/CMakeFiles/formatter_ex.dir
