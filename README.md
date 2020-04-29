@@ -186,9 +186,15 @@ skip_cleanup: true
 on:
   tags: true
 EOF
+```
+% git add .
+% git commit -m "First release"
+% git tag v1.0.0
+% git push origin master --tags
+
+```sh
 
 ```
-
 В качестве подсказки:
 ```sh
 $ cat .travis.yml
