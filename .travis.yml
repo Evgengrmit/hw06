@@ -26,10 +26,10 @@ deploy:
   provider: releases
   api_key:
     secure: jNptA5l3V8XyRJiZqDEZ/HxU4buK4U9RRCjeRMU5cYCpRSm5BjlTcKdvTpFr2nLYvQpwjGPz1qGQxE0t8/E0BKT50/Xj55DFeQLQgEkUZWhFzgyvfwytFLSq7i9bdL/ABdsceq6rrcLtqXBX/aJ/NAU4TcdkwU8LlGyEIm/FK5cu31hE+1nJyJYNIR61xDHl/OaIj2fTPQc4gcT9tMECKP+cxE6wpos+MEjhgZ4jOjGgdyQjwwr5NG7R5QgkCHrW/2hGAqTEA1XWaSeKFZ3HPtyHBt9cGljZ/IVAOKBr3iiHgF2+hUXXU3+dnEUn5EfJm/fi8wXdPIEO5OEmR/4Iibn6oU5hebPf5mvh9AZfQvSL28L5EDguh173OKGgh78ECZ7feeZSomSbW2iE8nSdrsP0IcE2k2UHXp2r81KFMgGc1N3+xAEreFyfMHX4ZoM45IQwtMuQ1w+bDzpMIY4W8aS2Kbc9k2CjUxB4dTHsxgpstupWpAJH0F6QyQ6HWm8hZmhxsB+VUdCjoyYaWr8k6V55+yKkhgb7zVgLW/dRfyA3YumAgHYbAyCDsS1dWrONBBCKefBcLreRBe3CoIxjTeupjzag5AH1LWXydZBlaMWAL3N+FppY8YfVk9qV69/EcNWUrAp4yy2+IdP0hWHEehCavEJ6lytaWfOSmOFNz5c=
-    file:
-      - ./_build/solver-1.0.0.-Darwin.dmg
-      - ./_build/solver-1.0.0.-Linux.deb
-      - ./_build/solver-1.0.0.-Linux.rpm
-    skip_cleanup: true
-    on:
-      tags: true
+  file:
+    - ./_build/solver-1.0.0.-Darwin.dmg
+    - ./_build/solver-1.0.0.-Linux.deb
+    - ./_build/solver-1.0.0.-Linux.rpm
+  skip_cleanup: true
+  on:
+    tags: true
