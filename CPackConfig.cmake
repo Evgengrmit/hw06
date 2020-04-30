@@ -40,11 +40,4 @@ set(CPACK_DMG_VOLUME_NAME "solverOS")
 # Минимальная версия OSX
 set(CPACK_OSX_PACKAGE_VERSION 10.5)
 
-# Помощь в установке пакета
-set(CPACK_NSIS_HELP_LINK https://github.com/Evgengrmit/hw06)
-# Помощь в использовании
-set(CPACK_NSIS_URL_INFO_ABOUT https://github.com/Evgengrmit/hw06)
-# Контактная информация
-set(CPACK_NSIS_CONTACT evgengrmit@icloud.com)
-
 include(CPack)
