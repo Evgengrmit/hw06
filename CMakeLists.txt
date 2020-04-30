@@ -26,6 +26,6 @@ include_directories(solver_lib)
 
 add_executable(solver solver_application/equation.cpp)
 target_link_libraries(solver formatter formatter_ex solver_lib)
-install(TARGETS solver DESTINATION bin)
+install(TARGETS solver ARCHIVE DESTINATION bin)
 
 include(CPackConfig.cmake)
