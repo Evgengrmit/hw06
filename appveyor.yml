@@ -10,11 +10,10 @@ build_script:
   - cmd: cd _build
   - cmd: ls
   - cmd: cpack -G NSIS
-  - cmd: cpack -G WIX
   - cmd: cd ..
 
 artifacts:
-  - path: ./_build/*.msi
+  - path: ./_build/*.exe
     name: solver
 deploy:
   release: $(APPVEYOR_REPO_TAG_NAME)

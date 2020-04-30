@@ -210,7 +210,7 @@ build_script:
   - cmd: cmake --build _build --config Release
   - cmd: cd _build
   - cmd: ls
-  - cmd: cpack -G WIX
+  - cmd: cpack -G NSIS
   - cmd: cd ..
 
 artifacts:
@@ -258,7 +258,7 @@ platform:
 - x64
 build_script:
 ...
-- cpack -G WIX # msi
+- cpack -G NSIS # msi
 ```
 
 Для этого нужно добавить ветвление в конфигурационные файлы для **CI** со следующей логикой:</br>
