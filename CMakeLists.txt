@@ -21,11 +21,7 @@ install(TARGETS formatter
 add_library(formatter_ex STATIC formatter_ex_lib/formatter_ex.cpp)
 include_directories(formatter_ex_lib)
 target_link_libraries(formatter_ex formatter)
-install(TARGETS formatter_ex
-    EXPORT print-config
-    ARCHIVE DESTINATION lib
-    LIBRARY DESTINATION lib
-)
+
 add_executable(hello_world hello_world_application/hello_world.cpp)
 target_link_libraries(hello_world formatter formatter_ex)
 
@@ -34,7 +30,5 @@ include_directories(solver_lib)
 
 add_executable(solver solver_application/equation.cpp)
 target_link_libraries(solver formatter formatter_ex solver_lib)
-install(TARGETS solver ARCHIVE DESTINATION bin)
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/solver_application/ DESTINATION solver_application)
-install(EXPORT print-config DESTINATION cmake)
+install(TARGETS solver DESTINATION bin)
 include(CPackConfig.cmake)
