@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Evgengrmit/hw06.svg?branch=master)](https://travis-ci.com/Evgengrmit/hw06)
+[![Build status](https://ci.appveyor.com/api/projects/status/12qqjwc35wo16n33/branch/master?svg=true)](https://ci.appveyor.com/project/Evgengrmit/hw06/branch/master)
 ## Homework VI
 
 После того, как вы настроили взаимодействие с системой непрерывной интеграции,</br>
@@ -139,7 +141,7 @@ EOF
 ```
 Перепишем `.travis.yml`
 ```sh
-% cat >> CMakeLists.txt <<EOF
+% cat >> .travis.yml <<EOF
 language: cpp
 jobs:
   include:
@@ -187,13 +189,43 @@ on:
   tags: true
 EOF
 ```
+```sh
 % git add .
 % git commit -m "First release"
 % git tag v1.0.0
 % git push origin master --tags
-
+```
+Создание `appveyor.yml`
 ```sh
+% cat >> appveyor.yml <<EOF
+image: Visual Studio 2019
+platform:
+  - x86
+  - x64
+configuration: Release
 
+build_script:
+  - cmd: cmake -H. -B_build
+  - cmd: cmake --build _build --config Release
+  - cmd: cd _build
+  - cmd: ls
+  - cmd: cpack -G WIX
+  - cmd: cd ..
+
+artifacts:
+  - path: ./_build/*.msi
+    name: solver
+deploy:
+  release: $(APPVEYOR_REPO_TAG_NAME)
+  description: 'Release description'
+  provider: GitHub
+  auth_token:
+    secure: tZdq4qXRLud/z27+KjHqLP0jpdTdUkrQ1XmSJMbSAnd2KTvjSqLjRlueHzHPhzLe
+  artifact: print
+  on:
+    APPVEYOR_REPO_TAG: true
+
+EOF
 ```
 В качестве подсказки:
 ```sh

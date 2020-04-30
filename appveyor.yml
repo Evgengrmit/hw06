@@ -1,20 +1,26 @@
 image: Visual Studio 2019
-
 platform:
-- x86
-- x64
+  - x86
+  - x64
+configuration: Release
+
 build_script:
   - cmd: cmake -H. -B_build
-  - cmd: cmake --build _build
+  - cmd: cmake --build _build --config Release
   - cmd: cd _build
+  - cmd: ls
   - cmd: cpack -G WIX
   - cmd: cd ..
+
+artifacts:
+  - path: ./_build/*.msi
+    name: solver
 deploy:
   release: $(APPVEYOR_REPO_TAG_NAME)
   description: 'Release description'
   provider: GitHub
   auth_token:
-    secure: tZdq4qXRLud/z27+KjHqLP0jpdTdUkrQ1XmSJMbSAnd2KTvjSqLjRlueHzHPhzLe # your encrypted token from GitHub
-  artifact: _build\*.msi           # upload all NuGet packages to release assets
+    secure: tZdq4qXRLud/z27+KjHqLP0jpdTdUkrQ1XmSJMbSAnd2KTvjSqLjRlueHzHPhzLe
+  artifact: solver
   on:
-    APPVEYOR_REPO_TAG: true        # deploy on tag push only
+    APPVEYOR_REPO_TAG: true
